@@ -20,6 +20,6 @@ mongoose.connect(MONGODB_URI, {
 .catch ( err => console.log(err) )
 
 
-app.listen(PORT,() => {
+app.listen(PORT || 8000,() => {
     console.log(`SERVER IS RUNNING ON ${PORT}`);
 })
