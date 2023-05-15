@@ -1,6 +1,7 @@
 const express = require('express');
 
 const userController = require('../controllers/userController')
+const countryController = require('../controllers/countryDataController')
 
 
 const router = express.Router();
@@ -18,4 +19,6 @@ router.post("/register", userController.User)
 router.post("/login", userController.login)
 router.get("/getusers", userController.getUsers)
 
+
+router.get('/country/:country', countryController.getCountryData);
 module.exports = router;

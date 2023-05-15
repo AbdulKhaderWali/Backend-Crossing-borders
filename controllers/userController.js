@@ -26,7 +26,7 @@ const login = async function(req,res){
     let {email,password}=req.body
  
     let data= await userModel.findOne({email:email,password:password})
-    console.log(data);
+    // console.log(data);
     if(!data){
         return res.status(200).send({status:false, msg:"Email or Password is incorrect.Please recheck it"})
     }
